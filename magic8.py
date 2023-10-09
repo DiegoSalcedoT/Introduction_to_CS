@@ -3,7 +3,7 @@ import random
 name = "Harry"
 question = "Will i become a millionaire?"
 answer = ""
-random_number = random.randint(1, 9)
+random_number = random.randint(1, 10)
 #print(random_number)
 
 if random_number == 1:
@@ -24,9 +24,13 @@ elif random_number == 8:
   answer = "Outlook not so good"
 elif random_number == 9:
   answer = "Very doubtful"
+elif random_number == 10:
+  answer = "Keep trying..."
 else:
   answer = "Error"
 
 print(f"{name} asks: {question}\n")
 
 print(f"Magic 8-Ball's answer: {answer}")
+
+
