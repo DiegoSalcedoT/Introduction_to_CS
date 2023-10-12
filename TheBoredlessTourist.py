@@ -6,6 +6,5 @@ def get_destination_index(destination):
   destination_index = destinations.index(destination)
   return destination_index
 
-print(get_destination_index("Los Angeles, USA"))
+print(get_destination_index("Paris, France"))
 
- 
