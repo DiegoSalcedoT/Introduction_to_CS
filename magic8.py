@@ -27,7 +27,7 @@ elif random_number == 9:
 elif random_number == 10:
   answer = "Keep trying..."
 else:
-  answer = "Error"
+  answer = "Error!"
 
 print(f"{name} asks: {question}\n")
 
