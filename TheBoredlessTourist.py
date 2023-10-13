@@ -1,3 +1,6 @@
+# Program to generate message for traveler and present attractions they might be interested in.
+# Codecademy Project - Diego Salcedo T.
+
 destinations = ["Paris, France", "Shanghai, China", "Los Angeles, USA", "São Paulo, Brazil", "Cairo, Egypt"]
 
 test_traveler = ['Erin Wilkes', 'Shanghai, China', ['historical site', 'art']]
@@ -31,6 +34,16 @@ def find_attractions(destination, interests):
         attractions_with_interest.append(possible_attraction[0])
   return attractions_with_interest
 
+def get_attractions_for_traveler(traveler):
+  traveler_destination = traveler[1]
+  traveler_interests = traveler[2]
+  traveler_attractions = find_attractions(traveler_destination, traveler_interests)
+  interests_string = f"Hi {traveler[0]}, we think you'll like these places around {traveler[1]}:"
+  for attraction in traveler_attractions:
+    interests_string += f", {attraction}"
+  interests_string = interests_string.replace(":,", ":")
+  return interests_string + "."
+
 add_attraction("Los Angeles, USA", ['Venice Beach', ['beach']])
 add_attraction("Paris, France", ["the Louvre", ["art", "museum"]])
 add_attraction("Paris, France", ["Arc de Triomphe", ["historical site", "monument"]])
@@ -43,7 +56,6 @@ add_attraction("São Paulo, Brazil", ["Pátio do Colégio", ["historical site"]]
 add_attraction("Cairo, Egypt", ["Pyramids of Giza", ["monument", "historical site"]])
 add_attraction("Cairo, Egypt", ["Egyptian Museum", ["museum"]])
 
-test_destination_index = get_traveler_location(test_traveler)
-la_arts = find_attractions("Los Angeles, USA", ['art'])
+smills_france = get_attractions_for_traveler(['Dereck Smill', 'Paris, France', ['monument']])
 
-print(la_arts)
+print(smills_france)
