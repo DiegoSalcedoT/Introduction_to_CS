@@ -69,7 +69,7 @@ Mbappe = Player('Kylian Mbappé', 'FRA', {"GLB": 91, "PAC": 97, "SHO": 89, "PAS"
 
 # Instantiation of teams:
 Inter_Miami = Team('Inter Miami', 225000000, 'USA', 'Miami', 'MLS')
-PSG = Team('Paris Saint-Germain', 600000000, 'FRA', 'Miami', 'MLS')
+PSG = Team('Paris Saint-Germain', 600000000, 'FRA', 'Paris', 'Ligue 1')
 
 # Teams' initial card
 print(Inter_Miami)
